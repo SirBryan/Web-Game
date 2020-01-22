@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
- <p> <h1> You Start hitting the wall with you axe and break through</h1></p>
- <p> <h1> you see your loving wife and kids standthere but than the monsters mother kills you...</h1></p>
- <a href = http://127.0.0.1:5500/Start.html> YOU DIED </a>
+    <style>
+        .ml15 {
+     font-weight: 800;
+     font-size: 3.8em;
+     text-transform: uppercase;
+     letter-spacing: 0.5em;
+     }
+
+     .ml15 .word {
+     display: inline-block;
+     line-height: 1em;
+     }
+    </style>
+    <body>
+        <p> <h1> You Start hitting the wall with you axe and break through</h1></p>
+        <p> <h1> you see your loving wife and kids standthere but than the monsters mother kills you...</h1></p>
+        <h1 class="ml15">
+            <a href = http://127.0.0.1:5500/Start.html><span class="word">YOU</span>
+            <span class="word">DIED</span></a>
+           
+          <h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            
+    
+            <script>anime.timeline({loop: true})
+                .add({
+                 targets: '.ml15 .word',
+                 scale: [14,1],
+                 opacity: [0,1],
+                 easing: "easeOutCirc",
+                 duration: 800,
+                 delay: (el, i) => 800 * i
+                })
+                .add({
+                 targets: '.ml15',
+                 opacity: 0,
+                 duration: 1000,
+                 easing: "easeOutExpo",
+                 delay: 1000
+                });
+            </script>
+            
 
 
 
-        </head>
-        </html>
+        </body>
+</html>
